@@ -145,5 +145,7 @@ ES_INDEX_SETTINGS = {
 }
 
 ES_CONNECTIONS = {
-    'default': {},
+    'default': {'host': 'localhost'},
 }
+
+ES_PAGINATION_SIZE = 30

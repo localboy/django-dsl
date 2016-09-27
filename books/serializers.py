@@ -17,6 +17,9 @@ class AuthorSerializer(ModelSerializer):
 class BookSerializer(ModelSerializer):
     author = AuthorSerializer(read_only=True)
 
+    def create(self, validated_data):
+        return Book.objects.create(**validated_data)
+
     class Meta:
         model = Book
         fields = (
